@@ -17,6 +17,9 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+# Get port from environment variable for Cloud Run
+PORT = int(os.getenv('PORT', '8080'))
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -30,7 +33,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DJANGO_DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'nivipro.in,localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'nivipro.in,localhost,127.0.0.1').split(',') + ['.run.app']
 
 # Security Settings
 CSRF_COOKIE_SECURE = True
