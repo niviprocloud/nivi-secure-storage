@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+
+{% block title %}NiVi Secure Cloud Storage - Encrypted File Storage{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">Secure Cloud Storage for Your Sensitive Files</h1>
+                <p class="lead mb-4">NiVi provides military-grade encryption, zero-day threat protection, and Google authentication to keep your files safe and accessible only to you.</p>
+                {% if user.is_authenticated %}
+                <div class="d-grid gap-2 d-md-flex">
+                    <a href="{% url 'dashboard' %}" class="btn btn-light btn-lg px-4 me-md-2">
+                        <i class="fas fa-tachometer-alt me-2"></i>Go to Dashboard
+                    </a>
+                    <a href="{% url 'upload_file' %}" class="btn btn-outline-light btn-lg px-4">
+                        <i class="fas fa-upload me-2"></i>Upload Files
+                    </a>
+                </div>
+                {% else %}
+                <div class="d-grid gap-2 d-md-flex">
+                    <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-light btn-lg px-4 me-md-2">
+                        <i class="fab fa-google me-2"></i>Sign in with Google
+                    </a>
+                    <a href="{% url 'security_policy' %}" class="btn btn-outline-light btn-lg px-4">
+                        <i class="fas fa-shield-alt me-2"></i>Learn About Security
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+                <div class="text-center">
+                    <i class="fas fa-cloud-upload-alt" style="font-size: 15rem; opacity: 0.8;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Why Choose NiVi Secure Cloud Storage?</h2>
+            <p class="lead text-muted">Our platform offers unparalleled security features to protect your data</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                            <i class="fas fa-lock fa-2x p-3"></i>
+                        </div>
+                        <h4 class="card-title">Military-Grade Encryption</h4>
+                        <p class="card-text">All files are encrypted with AES-256 encryption, the same standard used by governments to protect classified information.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                            <i class="fas fa-shield-alt fa-2x p-3"></i>
+                        </div>
+                        <h4 class="card-title">Zero-Day Threat Protection</h4>
+                        <p class="card-text">Our advanced threat detection system scans all files for potential security risks before they're stored.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                            <i class="fab fa-google fa-2x p-3"></i>
+                        </div>
+                        <h4 class="card-title">Google Authentication</h4>
+                        <p class="card-text">Secure login with your Google account ensures only you can access your encrypted files.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">How It Works</h2>
+            <p class="lead text-muted">Secure file storage made simple in three easy steps</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="text-center">
+                    <div class="step-circle bg-primary text-white mx-auto mb-3">1</div>
+                    <h4>Sign In</h4>
+                    <p>Login securely with your Google account</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="text-center">
+                    <div class="step-circle bg-primary text-white mx-auto mb-3">2</div>
+                    <h4>Upload Files</h4>
+                    <p>Select files to encrypt and store securely</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="text-center">
+                    <div class="step-circle bg-primary text-white mx-auto mb-3">3</div>
+                    <h4>Access Anywhere</h4>
+                    <p>Download and decrypt your files when needed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center py-3">
+        <h2 class="fw-bold mb-4">Ready to secure your files?</h2>
+        {% if user.is_authenticated %}
+        <a href="{% url 'upload_file' %}" class="btn btn-light btn-lg px-5">
+            <i class="fas fa-upload me-2"></i>Upload Now
+        </a>
+        {% else %}
+        <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-light btn-lg px-5">
+            <i class="fab fa-google me-2"></i>Get Started with Google
+        </a>
+        {% endif %}
+    </div>
+</section>
+
+{% block extra_css %}
+<style>
+    .feature-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+    }
+    
+    .step-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+</style>
+{% endblock %}
+
+{% endblock %}

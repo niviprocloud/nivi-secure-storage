@@ -1,0 +1,156 @@
+/* NiVi Secure Cloud Storage - Custom CSS */
+
+:root {
+    --nivi-primary: #4a6fdc;
+    --nivi-secondary: #6c757d;
+    --nivi-success: #28a745;
+    --nivi-info: #17a2b8;
+    --nivi-warning: #ffc107;
+    --nivi-danger: #dc3545;
+    --nivi-light: #f8f9fa;
+    --nivi-dark: #343a40;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fb;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-brand .highlight {
+    color: var(--nivi-primary);
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--nivi-primary) !important;
+}
+
+.nav-link.active {
+    color: var(--nivi-primary) !important;
+    font-weight: 600;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: var(--nivi-primary);
+    border-color: var(--nivi-primary);
+}
+
+.btn-primary:hover {
+    background-color: #3a5fc8;
+    border-color: #3a5fc8;
+}
+
+.btn-outline-primary {
+    color: var(--nivi-primary);
+    border-color: var(--nivi-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--nivi-primary);
+    border-color: var(--nivi-primary);
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-header {
+    border-radius: 0.5rem 0.5rem 0 0 !important;
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.file-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Feature Icons */
+.feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.step-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* File Upload Area */
+.upload-area {
+    border: 2px dashed #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: var(--nivi-primary);
+    background-color: #f8f9fa;
+}
+
+/* File Icons */
+.file-icon i {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #fff;
+    border-top: 1px solid #e9ecef;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .feature-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .step-circle {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+    }
+}

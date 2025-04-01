@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- Cloud Shape -->
+  <path d="M160,30 C160,46.57 146.57,60 130,60 L40,60 C23.43,60 10,46.57 10,30 C10,13.43 23.43,0 40,0 L130,0 C146.57,0 160,13.43 160,30 Z" fill="#4a6fdc" />
+  
+  <!-- Lock Icon -->
+  <g transform="translate(30, 15)" fill="#ffffff">
+    <rect x="5" y="15" width="30" height="20" rx="2" ry="2" />
+    <path d="M10,15 L10,10 C10,4.5 14.5,0 20,0 C25.5,0 30,4.5 30,10 L30,15 M20,22 L20,28" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" />
+  </g>
+  
+  <!-- Text -->
+  <text x="80" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff">
+    Ni<tspan fill="#ffffff" font-weight="normal">Vi</tspan>
+  </text>
+</svg>

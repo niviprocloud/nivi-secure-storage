@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - NiVi Secure Cloud Storage{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow border-0">
+                <div class="card-header bg-primary text-white text-center py-4">
+                    <h2 class="mb-0"><i class="fas fa-cloud me-2"></i>NiVi</h2>
+                    <p class="mb-0">Secure Cloud Storage</p>
+                </div>
+                <div class="card-body p-4">
+                    <div class="text-center mb-4">
+                        <h4>Welcome Back</h4>
+                        <p class="text-muted">Sign in to access your secure files</p>
+                    </div>
+                    
+                    <div class="d-grid gap-3 mb-4">
+                        <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.GET.next|default:'/' }}&state={{ request.session.state }}" class="btn btn-outline-dark btn-lg">
+                            <i class="fab fa-google me-2"></i>Sign in with Google
+                        </a>
+                    </div>
+                    
+                    <div class="separator text-muted text-center mb-4">
+                        <span>OR</span>
+                    </div>
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        {% if form.errors %}
+                        <div class="alert alert-danger">
+                            <i class="fas fa-exclamation-circle me-2"></i>Your username or password is incorrect. Please try again.
+                        </div>
+                        {% endif %}
+                        
+                        <div class="mb-3">
+                            <label for="id_username" class="form-label">Username</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" name="username" id="id_username" class="form-control" placeholder="Enter your username" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="id_password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                <input type="password" name="password" id="id_password" class="form-control" placeholder="Enter your password" required>
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer bg-light text-center py-3">
+                    <p class="mb-0">Don't have an account? <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.GET.next|default:'/' }}&state={{ request.session.state }}" class="text-primary">Sign up with Google</a></p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="{% url 'home' %}" class="text-decoration-none">
+                    <i class="fas fa-arrow-left me-1"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block extra_css %}
+<style>
+    .separator {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .separator::before,
+    .separator::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #dee2e6;
+    }
+    
+    .separator span {
+        padding: 0 1rem;
+    }
+</style>
+{% endblock %}
+
+{% endblock %}

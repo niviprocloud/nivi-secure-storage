@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+
+{% block title %}Security Policy - NiVi Secure Cloud Storage{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0"><i class="fas fa-shield-alt me-2"></i>NiVi Secure Cloud Storage Security Policy</h2>
+                </div>
+                <div class="card-body p-4">
+                    <div class="alert alert-info mb-4">
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <i class="fas fa-info-circle fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="alert-heading">Your Security is Our Priority</h5>
+                                <p class="mb-0">This document outlines the security measures and practices implemented by NiVi Secure Cloud Storage to protect your data.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <section class="mb-5">
+                        <h3 class="border-bottom pb-2 mb-3">Data Encryption</h3>
+                        <p>NiVi Secure Cloud Storage uses AES-256 encryption, the industry standard for securing sensitive data. This is the same encryption standard used by governments and financial institutions worldwide.</p>
+                        
+                        <div class="card bg-light mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-lock me-2 text-primary"></i>How Our Encryption Works</h5>
+                                <ol class="mb-0">
+                                    <li><strong>Client-Side Encryption:</strong> Your files are encrypted before they leave your device.</li>
+                                    <li><strong>Unique Keys:</strong> Each file is encrypted with a unique encryption key.</li>
+                                    <li><strong>Secure Key Storage:</strong> Encryption keys are securely stored and never exposed.</li>
+                                    <li><strong>Encrypted Storage:</strong> Files remain encrypted while stored on our servers.</li>
+                                    <li><strong>Secure Decryption:</strong> Files are only decrypted when you download them.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="mb-5">
+                        <h3 class="border-bottom pb-2 mb-3">Zero-Day Threat Protection</h3>
+                        <p>Our platform includes advanced threat detection to identify and block potential security risks before they can affect your data.</p>
+                        
+                        <div class="card bg-light mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-shield-virus me-2 text-primary"></i>Threat Detection Features</h5>
+                                <ul class="mb-0">
+                                    <li><strong>File Scanning:</strong> All uploaded files are scanned for potential threats.</li>
+                                    <li><strong>Malware Detection:</strong> Advanced algorithms identify known and potential malware.</li>
+                                    <li><strong>Suspicious Behavior Monitoring:</strong> System monitors for unusual access patterns.</li>
+                                    <li><strong>Regular Updates:</strong> Threat detection systems are continuously updated.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="mb-5">
+                        <h3 class="border-bottom pb-2 mb-3">Authentication & Access Control</h3>
+                        <p>NiVi Secure Cloud Storage uses Google OAuth2 for authentication, providing a secure and convenient way to access your account.</p>
+                        
+                        <div class="card bg-light mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-user-shield me-2 text-primary"></i>Authentication Security</h5>
+                                <ul class="mb-0">
+                                    <li><strong>Google OAuth2:</strong> Secure authentication without storing passwords.</li>
+                                    <li><strong>Two-Factor Authentication:</strong> Additional security through Google's 2FA.</li>
+                                    <li><strong>Session Management:</strong> Secure session handling and timeout policies.</li>
+                                    <li><strong>Access Logging:</strong> All access attempts are logged and monitored.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="mb-5">
+                        <h3 class="border-bottom pb-2 mb-3">Data Privacy</h3>
+                        <p>We are committed to protecting your privacy and ensuring that your data is only accessible to you.</p>
+                        
+                        <div class="card bg-light mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-user-secret me-2 text-primary"></i>Privacy Commitments</h5>
+                                <ul class="mb-0">
+                                    <li><strong>No Data Mining:</strong> We do not analyze or mine your data for any purpose.</li>
+                                    <li><strong>No Third-Party Access:</strong> Your data is never shared with third parties.</li>
+                                    <li><strong>Transparent Policies:</strong> Clear and straightforward privacy policies.</li>
+                                    <li><strong>Data Ownership:</strong> You retain full ownership of your data at all times.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="mb-5">
+                        <h3 class="border-bottom pb-2 mb-3">Security Logging & Monitoring</h3>
+                        <p>NiVi Secure Cloud Storage maintains comprehensive security logs to detect and respond to potential security incidents.</p>
+                        
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-search me-2 text-primary"></i>Security Monitoring</h5>
+                                <ul class="mb-0">
+                                    <li><strong>Activity Logging:</strong> All system activities are logged for security analysis.</li>
+                                    <li><strong>Anomaly Detection:</strong> Automated systems detect unusual patterns or behaviors.</li>
+                                    <li><strong>Security Alerts:</strong> Immediate notifications for potential security issues.</li>
+                                    <li><strong>Regular Audits:</strong> System security is regularly audited and tested.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <div class="alert alert-success mt-4">
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <i class="fas fa-check-circle fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="alert-heading">Your Data is Protected</h5>
+                                <p class="mb-0">NiVi Secure Cloud Storage is designed with security as its foundation. We continuously update our security measures to protect against emerging threats.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-light">
+                    <div class="text-center">
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'dashboard' %}" class="btn btn-primary">
+                            <i class="fas fa-tachometer-alt me-2"></i>Go to Dashboard
+                        </a>
+                        {% else %}
+                        <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-primary">
+                            <i class="fab fa-google me-2"></i>Sign in with Google
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
